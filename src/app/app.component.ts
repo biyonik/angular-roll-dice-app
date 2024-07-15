@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import DieComponent from "./components/die.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [RouterOutlet, DieComponent],
+  template: `
+    <die [face]="'one'" />
+  `,
+  styles: [`
+    
+  `]
 })
 export class AppComponent {
-  title = 'angular-roll-dice';
+  title = `Angular Roll Dice App - ${VERSION.major}`;
 }
