@@ -1,13 +1,13 @@
 import { Component, VERSION } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import DieComponent from "./components/die.component";
+import RollDiceComponent from "./components/roll-dice.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DieComponent],
+  imports: [RouterOutlet, RollDiceComponent],
   template: `
-    <die [face]="'one'" />
+    <roll-dice />
   `,
   styles: [`
     
